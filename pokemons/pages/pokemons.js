@@ -15,9 +15,9 @@ export default function pokemons({ pokemonNames }) {
         <a>Names Page</a>
       </Link>
 
-      {pokemonNames.game_indices.map((pokemonName) => (
+      {pokemonNames.results.map((pokemonName) => (
         <ul>
-          <li> {pokemonName.version.name}</li>
+          <li> {pokemonName.name}</li>
         </ul>
       ))}
     </div>
@@ -25,7 +25,7 @@ export default function pokemons({ pokemonNames }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+  const res = await fetch("https://pokeapi.co/api/v2/pokemon/");
   const pokemonNames = await res.json();
 
   return {
