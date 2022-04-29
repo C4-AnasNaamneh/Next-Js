@@ -5,13 +5,12 @@ export default function name({ pokemonDetails }) {
   const { name } = router.query;
 
   return (
-    <div>
-      <h1>Name Page</h1>
+    <div style={{fontSize:"x-large"}}>
+      <h1>Pokemon Details Page</h1>
       <p>Pokemon Name: {name}</p>
-      {pokemonDetails.abilities.map((pokemonDetail) => (
+      {pokemonDetails.abilities.map((details) => (
         <>
-          {console.log(pokemonDetail)}
-          <li>Pokemon Abilities: {pokemonDetail.ability.name}</li>
+          <p> Pokemon Abilities: {details.ability.name}</p>
         </>
       ))}
       <p>Pokemon Experience: {pokemonDetails.base_experience}</p>
@@ -26,7 +25,6 @@ export async function getServerSideProps(ctx) {
     `https://pokeapi.co/api/v2/pokemon/${ctx.query.name}`
   );
   const pokemonDetails = await res.json();
-  console.log(ctx);
   return {
     props: { pokemonDetails },
   };

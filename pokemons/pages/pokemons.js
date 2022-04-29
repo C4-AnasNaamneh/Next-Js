@@ -8,10 +8,10 @@ export default function pokemons({ pokemonNames }) {
       <h1>Pokemons Page</h1>
 
       {pokemonNames.results.map((pokemonName) => (
-        <ul>
+        <ul className={styles.ul}>
           <li> {pokemonName.name}</li>
           <Link href="/pokemon/[name]" as={`/pokemon/${pokemonName.name}`}>
-            Go To Pokemon's Details Page
+            <a className={styles.anchorTag}> Go To Pokemon's Details Page</a>
           </Link>
         </ul>
       ))}
