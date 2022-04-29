@@ -6,18 +6,13 @@ export default function pokemons({ pokemonNames }) {
   return (
     <div className={styles.container}>
       <h1>Pokemons Page</h1>
-      <Link
-        href={{
-          pathname: "/pokemon/[name]",
-          query: { name: "name" },
-        }}
-      >
-        <a>Names Page</a>
-      </Link>
 
       {pokemonNames.results.map((pokemonName) => (
         <ul>
           <li> {pokemonName.name}</li>
+          <Link href="/pokemon/[name]" as={`/pokemon/${pokemonName.name}`}>
+            Go To Pokemon's Details Page
+          </Link>
         </ul>
       ))}
     </div>
