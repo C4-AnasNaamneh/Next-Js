@@ -6,8 +6,7 @@ export default function pokemons({ pokemonNames }) {
   return (
     <div className={styles.container}>
       <h1>Pokemons Page</h1>
-
-      {pokemonNames.results.map((pokemonName) => (
+      {pokemonNames.pokemonName.results.map((pokemonName) => (
         <ul className={styles.ul}>
           <li> {pokemonName.name}</li>
           <Link href="/pokemon/[name]" as={`/pokemon/${pokemonName.name}`}>
@@ -20,7 +19,7 @@ export default function pokemons({ pokemonNames }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("https://pokeapi.co/api/v2/pokemon/");
+  const res = await fetch("http://localhost:3000/api/pokemonNames/pokemon");
   const pokemonNames = await res.json();
 
   return {
