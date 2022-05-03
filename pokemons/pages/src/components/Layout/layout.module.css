@@ -1,12 +1,15 @@
 .header {
-    background-color: blue;
-  }
-  
-  
-  .main {
-    height: 100vh;
-  }
-  
-  .footer{
-    background-color: blue;
-  }
+  padding: 0.5rem;
+  background-color: #F7C30A;
+  font-size: x-large;
+}
+
+.main {
+  height: calc(100vh - 117px);
+}
+
+.footer {
+  padding: 0.5rem;
+  background-color: #F7C30A;
+  font-size: x-large;
+}

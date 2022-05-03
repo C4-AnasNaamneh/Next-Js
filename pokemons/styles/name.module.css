@@ -3,29 +3,32 @@
 }
 
 .grass {
-  background-color: #71D41A;
+  background-color: #71d41a;
 }
 
 .bug {
-  background-color: #9B1FE8;
-
+  background-color: #9b1fe8;
 }
 
 .fire {
-  background-color: #F3D700;
- 
+  background-color: #f3d700;
 }
 
 .water {
-  background-color: #299EA7;
-
+  background-color: #299ea7;
 }
 
 .normal {
   background-color: grey;
-
 }
 
 .default {
   background-color: white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

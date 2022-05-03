@@ -4,16 +4,23 @@ import Link from "next/link";
 
 export default function pokemons({ pokemonNames }) {
   return (
-    <div className={styles.container}>
-      <h1>Pokemons Page</h1>
+    <div >
+      <h2 className={styles.header}>Pokemons Page</h2>
+
       {pokemonNames.pokemonName.results.map((pokemonName) => (
         <ul className={styles.ul}>
-          <li> {pokemonName.name}</li>
           <Link href="/pokemon/[name]" as={`/pokemon/${pokemonName.name}`}>
-            <a className={styles.anchorTag}> Go To Pokemon's Details Page</a>
+            <a className={styles.anchorTag}>
+              {" "}
+              <li className={styles.li}> {pokemonName.name}</li>
+            </a>
           </Link>
         </ul>
       ))}
+
+      <Link href="/">
+        <a className={styles.link}>Go To Home Page</a>
+      </Link>
     </div>
   );
 }
