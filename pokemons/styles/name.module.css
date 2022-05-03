@@ -1,0 +1,31 @@
+.name {
+  font-size: x-large;
+}
+
+.grass {
+  background-color: #71D41A;
+}
+
+.bug {
+  background-color: #9B1FE8;
+
+}
+
+.fire {
+  background-color: #F3D700;
+ 
+}
+
+.water {
+  background-color: #299EA7;
+
+}
+
+.normal {
+  background-color: grey;
+
+}
+
+.default {
+  background-color: white;
+}

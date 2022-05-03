@@ -6,7 +6,6 @@ export default async function getPokemonByName(req, res,ctx) {
         `https://pokeapi.co/api/v2/pokemon/${req.query.name}`
       );
       const pokemonDetails = await response.json();
-console.log(response)
 
     res.status(200).json({ pokemonDetails })
   }
